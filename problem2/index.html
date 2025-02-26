@@ -1,1 +1,51 @@
+<html>
+
+<head>
+    <title>Fancy Form</title>
+
+    <!-- You may add more stuff here -->
+    <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<h1>Swap</h1>
+
+<!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+<form onsubmit="return !1">
+    <div class="input-group">
+        <label for="input-amount">Send</label>
+        <input id="input-amount" type="number" placeholder="Enter amount"/>
+
+        <select id="from-token">
+            <option value="BLUR">BLUR</option>
+            <option value="USD">USD</option>
+            <option value="GMX">GMX</option>
+            <option value="STLUNA">STLUNA</option>
+            <option value="SWTH">SWTH</option>
+        </select>
+    </div>
+
+    <div class="output-group">
+        <label for="output-amount">Receive</label>
+        <input id="output-amount" type="number" placeholder="Amount" disabled/>
+
+        <select id="to-token">
+            <option value="BLUR">BLUR</option>
+            <option value="USD">USD</option>
+            <option value="GMX">GMX</option>
+            <option value="STLUNA">STLUNA</option>
+            <option value="SWTH">SWTH</option>
+        </select>
+    </div>
+
+    <button id="confirm-button" type="button">CONFIRM SWAP</button>
+
+    <div id="error-message"></div>
+
+</form>
+<script src="script.js"></script>
+</body>
+
+</html>
 
