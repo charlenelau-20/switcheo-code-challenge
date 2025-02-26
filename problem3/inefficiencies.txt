@@ -1,0 +1,21 @@
+1. in useEffect(), console.err is used instead of console.error.
+--> use console.error.
+
+2. in sortedBalances, lhsPriority is used, but it is not defined in scope.
+--> replace lhsPriority with balancePriority.
+
+3. the filter condition in sortedBalances returns true for balance amounts less than 0, and false for other amounts.
+--> should return false for balance amounts less than 0 and true for others.
+
+4. in formattedBalances, the formatted amount just uses toFixed() without actually specifying the decimal places.
+--> specify the decimal places.
+
+5. formattedBalances is created but not used.
+--> use formattedBalances instead of sortedBalances in rows.
+
+6. balance.blockchain is used in sortedBalances (to get balancePriority) but blockchain is not defined in the
+   WalletBalance interface.
+--> define blockchain in the WalletBalance interface.
+
+7. Props extends BoxProps, but BoxProps is not defined.
+--> remove BoxProps and define a Props interface.
